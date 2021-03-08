@@ -2,8 +2,72 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:c="http://www.springframework.org/schema/c"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
 ">
  
+      <!--        By Property Value tag       -->
+<!--       
+    <bean class="com.springcore.StudentBean" name="stuBean">
+     
+        <constructor-arg name="studentId">
+            <value>19717</value>
+        </constructor-arg>
+
+        <constructor-arg name="studentName" >
+            <value>Jitesh Singh</value>
+        </constructor-arg>
+
+        <constructor-arg name="studentAddress">
+            <value>Korba</value>
+        </constructor-arg>
+        
+    </bean>
+    
+    <bean class="com.springcore.StudentBean" name="stuBean2">
+     
+        <constructor-arg name="studentId">
+            <value>231732</value>
+        </constructor-arg>
+
+        <constructor-arg name="studentName">
+            <value>Jitu Thakur</value>
+        </constructor-arg>
+
+        <constructor-arg name="studentAddress">
+            <value>Korba</value>
+        </constructor-arg>
+        
+    </bean>
+    -->
+     
+    <!--        By Value Attribute       -->
+    
+<!--    
+    <bean class="com.springcore.StudentBean" name="stuBean">
+    
+        <constructor-arg name="studentId" value="19591711"/>
+
+        <constructor-arg name="studentName" value="Jitesh Singh"/>
+
+        <constructor-arg name="studentAddress" value="Korba"/>
+    </bean>
+    
+     <bean class="com.springcore.StudentBean" name="stuBean2">
+    
+        <constructor-arg name="studentId" value="19591711"/>
+
+        <constructor-arg name="studentName" value="Jitesh Singh"/>
+
+        <constructor-arg name="studentAddress" value="Korba"/>
+    </bean>
+    -->
+    
+    <!--        By p Schema         -->
+        
+       <bean class="com.springcore.StudentBean" name="stuBean" c:studentId="19591711" c:studentName="JituThakur" c:studentAddress="Korba"/> 
+       
+       <bean class="com.springcore.StudentBean" name="stuBean2" c:studentId="1711" c:studentName="Jitesh Thakur" c:studentAddress="Korba"/> 
+    
         
 </beans>

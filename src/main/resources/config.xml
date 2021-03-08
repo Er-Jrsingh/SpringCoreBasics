@@ -63,7 +63,7 @@
     </bean>
     -->
     
-    <!--        By p Schema         -->
+    <!--        By c Schema         -->
         
        <bean class="com.springcore.StudentBean" name="stuBean" c:studentId="19591711" c:studentName="JituThakur" c:studentAddress="Korba"/> 
        

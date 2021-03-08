@@ -1,4 +1,5 @@
 package com.springcore;
+import com.springcore.objects.StuInfo;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
@@ -13,6 +14,11 @@ public class Students {
 
         StudentBean beanObject2 = (StudentBean) context.getBean("stuBean2");
         System.out.println(beanObject2);
+        
+        ApplicationContext ObjContext = new ClassPathXmlApplicationContext("obj_config.xml");
+
+        StuInfo ObjBeanObject = (StuInfo) ObjContext.getBean("stuInfoObject");
+        System.out.println(ObjBeanObject);
 
      
 

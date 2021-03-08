@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:c="http://www.springframework.org/schema/c"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+">
+    
+    
+    <bean class="com.springcore.objects.StuRoll" name="stuRollObject">
+        <constructor-arg name="rollNo">
+            <value>191591</value>
+        </constructor-arg>
+    </bean>
+    
+    <!--    Using c Schema  -->
+    
+    <!--<bean class="com.springcore.objects.StuInfo" name="stuInfoObject" c:name="Json" c:rollObj-ref="stuRollObject" />-->
+          
+    <!--    By Element or Tag    --> 
+    <!--                             
+<bean class="com.springcore.objects.StuInfo" name="stuInfoObject">
+    <constructor-arg>
+        <value>
+            Jitu Thakur
+        </value>
+    </constructor-arg>
+    
+    <constructor-arg>
+        <ref bean="stuRollObject"/>      
+    </constructor-arg>
+</bean>
+    -->
+        
+    <!--    By ref Attribute    -->
+        
+    <bean class="com.springcore.objects.StuInfo" name="stuInfoObject">
+           
+        <constructor-arg value="DoDo" />
+        <constructor-arg ref="stuRollObject"/>   
+        
+    </bean>
+        
+</beans>

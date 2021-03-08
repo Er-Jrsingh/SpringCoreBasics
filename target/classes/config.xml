@@ -4,6 +4,69 @@
        xmlns:p="http://www.springframework.org/schema/p"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
 ">
- 
+   
+    <!--        By Property Value tag       -->
+       
+    <bean class="com.springcore.StudentBean" name="stuBean">
+     
+        <property name="studentId">
+            <value>19717</value>
+        </property>
+
+        <property name="studentName">
+            <value>Jitesh Singh</value>
+        </property>
+
+        <property name="studentAddress">
+            <value>Korba</value>
+        </property>
+        
+    </bean>
+    
+    <bean class="com.springcore.StudentBean" name="stuBean2">
+     
+        <property name="studentId">
+            <value>231732</value>
+        </property>
+
+        <property name="studentName">
+            <value>Jitu Thakur</value>
+        </property>
+
+        <property name="studentAddress">
+            <value>Korba</value>
+        </property>
+        
+    </bean>
+    
+     
+    <!--        By Value Attribute       -->
+    
+    <!--
+    <bean class="com.springcore.StudentBean" name="stuBean">
+    
+        <property name="studentId" value="19591711"/>
+
+        <property name="studentName" value="Jitesh Singh"/>
+
+        <property name="studentAddress" value="Korba"/>
+    </bean>
+    
+     <bean class="com.springcore.StudentBean" name="stuBean2">
+    
+        <property name="studentId" value="19591711"/>
+
+        <property name="studentName" value="Jitesh Singh"/>
+
+        <property name="studentAddress" value="Korba"/>
+    </bean>
+    -->
+    
+    <!--        By p Schema         -->
+    <!--    
+       <bean class="com.springcore.StudentBean" name="stuBean" p:studentId="19591711" p:studentName="JituThakur" p:studentAddress="Korba"/> 
+       
+       <bean class="com.springcore.StudentBean" name="stuBean2" p:studentId="1711" p:studentName="Jitesh Thakur" p:studentAddress="Korba"/> 
+    -->
         
 </beans>

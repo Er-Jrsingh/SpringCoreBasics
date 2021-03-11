@@ -1,4 +1,5 @@
 package com.springcore;
+import com.springcore.ambiguity.DataBean;
 import com.springcore.objects.StuInfo;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
@@ -19,6 +20,12 @@ public class Students {
 
         StuInfo ObjBeanObject = (StuInfo) ObjContext.getBean("stuInfoObject");
         System.out.println(ObjBeanObject);
+        
+         ApplicationContext ambigContext = new ClassPathXmlApplicationContext("ambiguity_config.xml");
+
+        DataBean dataBeanObject = (DataBean) ambigContext.getBean("dataBean");
+        
+        dataBeanObject.addition();
 
      
 

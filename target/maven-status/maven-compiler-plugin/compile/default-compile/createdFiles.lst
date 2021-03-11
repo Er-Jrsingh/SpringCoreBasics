@@ -1,4 +1,5 @@
+com/springcore/ambiguity/DataBean.class
+com/springcore/Students.class
 com/springcore/objects/StuRoll.class
 com/springcore/StudentBean.class
-com/springcore/objects/StuName.class
-com/springcore/Students.class
+com/springcore/objects/StuInfo.class

@@ -9,7 +9,7 @@
     <!--        By Value Attribute       -->
     
     <bean class="com.springcore.ambiguity.DataBean" name="dataBean">
-        <constructor-arg name="num1" value="10" />
-        <constructor-arg name="num2" value="15" />
+        <constructor-arg name="num1" value="10" type="int" />
+        <constructor-arg name="num2" value="15" type="int"/>
     </bean>    
 </beans>

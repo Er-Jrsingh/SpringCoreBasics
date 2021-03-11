@@ -4,17 +4,17 @@ public class DataBean {
 
     private int num1;
     private int num2;
+    
+     public DataBean(double num1, double num2) {
+        this.num1 = (int)num1;
+        this.num2 = (int)num2;
+        System.out.println("constructor : double double");
+    }
 
     public DataBean(int num1, int num2) {
         this.num1 = num1;
         this.num2 = num2;
         System.out.println("constructor : int int");
-    }
-    
-    public DataBean(double num1, double num2) {
-        this.num1 = (int)num1;
-        this.num2 = (int)num2;
-        System.out.println("constructor : double double");
     }
     
     public DataBean(String num1, String num2) {
@@ -25,6 +25,9 @@ public class DataBean {
     
    public void addition(){
        
+       System.out.println("Num1 :- "+num1);
+       System.out.println("Num2 :- "+num2);
+            
        System.out.println("Sum Is :- "+(this.num1+this.num2));
       
     }

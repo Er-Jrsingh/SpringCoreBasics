@@ -1,15 +1,14 @@
-
 package com.springcore;
 
 import org.springframework.beans.factory.DisposableBean;
 import org.springframework.beans.factory.InitializingBean;
 
-public class Customers implements InitializingBean,DisposableBean{
-    
+public class Customers implements InitializingBean, DisposableBean {
+
     private String name;
 
     public Customers() {
-        System.out.println("I Am Customers Constructor"); 
+        System.out.println("I Am Customers Constructor");
     }
 
     @Override
@@ -22,7 +21,7 @@ public class Customers implements InitializingBean,DisposableBean{
     }
 
     public void setName(String name) {
-        System.out.println("Customers Setter"); 
+        System.out.println("Customers Setter");
         this.name = name;
     }
 
@@ -35,5 +34,5 @@ public class Customers implements InitializingBean,DisposableBean{
     public void destroy() throws Exception {
         System.out.println("Desrtoy From Customers");
     }
-    
+
 }

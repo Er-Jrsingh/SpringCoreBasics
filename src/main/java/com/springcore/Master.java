@@ -8,6 +8,8 @@ public class Master {
 
     public static void main(String[] args) {
 
+        System.out.println("++++++++++++++++++++++++++++++++++++++    By Xml  ++++++++++++++++++++++++++++++++++++++++++++++");
+
 //        ApplicationContext context = new ClassPathXmlApplicationContext("config.xml");
         AbstractApplicationContext context = new ClassPathXmlApplicationContext("config.xml");
 
@@ -18,13 +20,21 @@ public class Master {
         context.registerShutdownHook(); //Helps To Call Destroy Method
 //        context.destroy();
 
-        System.out.println("++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
+        System.out.println("+++++++++++++++++++++++++++++++++++++   By Interface    +++++++++++++++++++++++++++++++++++++++++++");
 
-        AbstractApplicationContext Interfacecontext = new ClassPathXmlApplicationContext("config.xml");
+        ApplicationContext Interfacecontext = new ClassPathXmlApplicationContext("config.xml");
 
         Customers customers = (Customers) Interfacecontext.getBean("Customer");
 
         System.out.println(customers);
+
+        System.out.println("+++++++++++++++++++++++++++++++++++++   By Annotation    +++++++++++++++++++++++++++++++++++++++++++++++");
+
+        ApplicationContext productContext = new ClassPathXmlApplicationContext("config.xml");
+
+        Products products = (Products) productContext.getBean("products");
+
+        System.out.println(products);
 
     }
 

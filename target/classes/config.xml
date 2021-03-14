@@ -2,16 +2,22 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xmlns:p="http://www.springframework.org/schema/p"
-       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
-">
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd"
+       xmlns:context="http://www.springframework.org/schema/context">
+    
+    <!--<context:annotation-config />                 Enable All Annotation -->
+    <bean class="org.springframework.context.annotation.CommonAnnotationBeanPostProcessor"/>   <!-- Enable Specific Annotation -->
     
     <bean class="com.springcore.Employee" name="Emp" init-method="init" destroy-method="destroy" >
-    <property name="salary" value="1000000.00" />
+        <property name="salary" value="1000000.00" />
     </bean>
     
     <bean class="com.springcore.Customers" name="Customer">
-    <property name="name" value="Jitesh Thakur" />
+        <property name="name" value="Jitesh Thakur" />
     </bean>
- 
+    
+    <bean class="com.springcore.Products" name="products">
+        <property name="productName" value="Android App" />
+    </bean>
         
 </beans>

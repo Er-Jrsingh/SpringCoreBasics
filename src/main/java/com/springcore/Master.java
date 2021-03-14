@@ -14,9 +14,17 @@ public class Master {
         Employee emp = (Employee) context.getBean("Emp");
 
         System.out.println(emp);
-        
+
         context.registerShutdownHook(); //Helps To Call Destroy Method
 //        context.destroy();
+
+        System.out.println("++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
+
+        AbstractApplicationContext Interfacecontext = new ClassPathXmlApplicationContext("config.xml");
+
+        Customers customers = (Customers) Interfacecontext.getBean("Customer");
+
+        System.out.println(customers);
 
     }
 

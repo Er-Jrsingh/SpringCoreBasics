@@ -8,6 +8,10 @@
     <bean class="com.springcore.Employee" name="Emp" init-method="init" destroy-method="destroy" >
     <property name="salary" value="1000000.00" />
     </bean>
+    
+    <bean class="com.springcore.Customers" name="Customer">
+    <property name="name" value="Jitesh Thakur" />
+    </bean>
  
         
 </beans>

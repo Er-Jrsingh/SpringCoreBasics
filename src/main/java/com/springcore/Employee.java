@@ -6,7 +6,7 @@ public class Employee {
     private float salary;
     
     Employee(){
-        System.out.println("I Am Constructor");     //Run First
+        System.out.println("I Am Employee Constructor");     //Run First
     }
 
     public float getSalary() {
@@ -14,19 +14,19 @@ public class Employee {
     }
 
     public void setSalary(float salary) {
-        System.out.println("Congo! Property Initialized");      //Run Second
+        System.out.println("Employee Setter");      //Run Second
         this.salary = salary;
     }
     
     public void init(){                               /* method name init Not Mandatory But Siganture Is Mandatory  */  
         
-        System.out.println("Hola! Init");       //Run Third
+        System.out.println("Hola! Employee Init");       //Run Third
         
     }
     
     public void destroy(){                             /* method name destroy Not Mandatory But Siganture Is Mandatory  */ 
         
-        System.out.println("Oooopss! Destroy");     //Run Last
+        System.out.println("Oooopss! Employee Destroy");     //Run Last
         
     }
     

@@ -1,6 +1,7 @@
 package com.springcore.annotation;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 
 public class StuName {
 
@@ -8,6 +9,7 @@ public class StuName {
     
 //    Autowiring By Property uses Setter to initialize
    @Autowired
+   @Qualifier("rollObj3")
     private StuRoll rollObj;
 
     public StuName() {
@@ -22,6 +24,7 @@ public class StuName {
     
 //    Autowiring By Constructor
 //   @Autowired
+//   @Qualifier("rollObj2") //Not Allowed Here
     public StuName(StuRoll rollObj) {
         
         System.out.println("Set rollObj By Constructor");
@@ -45,6 +48,7 @@ public class StuName {
 
 //  Autowiring By Setter
 //   @Autowired
+//   @Qualifier("rollObj2")
     public void setRollObj(StuRoll rollObj) {
 
         System.out.println("setRollObj Of StuName ");

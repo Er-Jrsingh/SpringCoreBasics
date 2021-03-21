@@ -17,6 +17,23 @@
             </value>
         </property>
     </bean>
+    
+    <!--   To Demonstrate @Qualifier  -->
+    <bean class="com.springcore.annotation.StuRoll" name="rollObj2">   
+        <property name="rollNo">
+            <value>
+                254956
+            </value>
+        </property>
+    </bean>
+ 
+     <bean class="com.springcore.annotation.StuRoll" name="rollObj3">   
+        <property name="rollNo">
+            <value>
+                345323
+            </value>
+        </property>
+    </bean>
         
     <bean class="com.springcore.annotation.StuName" name="stuNameObject" >              
         <property name="name" value="Json"/>

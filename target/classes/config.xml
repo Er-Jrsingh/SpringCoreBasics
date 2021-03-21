@@ -2,8 +2,37 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xmlns:p="http://www.springframework.org/schema/p"
-       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
-">
- 
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    
+    
+    <bean class="com.springcore.StuRoll" name="rollObj">     <!--    Name Must Be Same As Ref Var Name of Callee Class  -->    
+        <property name="rollNo">
+            <value>
+                191591
+            </value>
+        </property>
+    </bean>
+    
+    <!--       it search  rollObj in this config file (Use Setter)     --> 
         
+    <bean class="com.springcore.StuName" name="stuNameObject" autowire="byName" >              
+        <property name="name" value="Json"/>
+    </bean>  
+    
+    
+    <!--  it search StuRoll Type Bean in this config file (Use Setter)   -->
+    
+    <!--        
+           <bean class="com.springcore.StuName" name="stuNameObject" autowire="byType" >        
+           <property name="name" value="Json"/>
+           </bean>  
+    -->
+    
+    <!--  it search StuRoll Constructor StuName(StuRoll rollObj) & Call setName    -->      
+    
+    <!--       <bean class="com.springcore.StuName" name="stuNameObject" autowire="constructor">           
+               <property name="name" value="Json"/>
+               </bean>
+    -->
+     
 </beans>

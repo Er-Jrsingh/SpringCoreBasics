@@ -1,1 +1,5 @@
-com/springcore/Master.class
+com/springcore/annotation/StuName.class
+com/springcore/StuName.class
+com/springcore/StuRoll.class
+com/springcore/Students.class
+com/springcore/annotation/StuRoll.class

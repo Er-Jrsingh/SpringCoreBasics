@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd             
+">
+   
+    <!--        By Property Value tag       -->
+       
+    <bean class="com.springcore.property_inject.DbConfig" name="dbCon">
+        
+        <property name="config">
+            
+            <props>
+                <prop key="driver" >
+                    com.mysql.jdbc.Driver 
+                </prop>
+                <prop key="username" >
+                    Jitesh
+                </prop>
+                <prop key="password" >
+                    root
+                </prop>
+                <prop key="url" >
+                    mysql:jdbc://localhost:3306/database 
+                </prop>
+            </props>
+            
+        </property>
+        
+  
+    </bean>
+    
+</beans>
+    
+     
+ 

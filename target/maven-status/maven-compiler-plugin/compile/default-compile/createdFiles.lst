@@ -1,2 +1,6 @@
-com/springcore/StudentBean.class
 com/springcore/Students.class
+com/springcore/collection/StudentDetailsBean.class
+com/springcore/StudentBean.class
+property_inject/DbConfig.class
+com/springcore/object/StuName.class
+com/springcore/object/StuRoll.class

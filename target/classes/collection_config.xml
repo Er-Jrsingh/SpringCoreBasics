@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+                           http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
+    
+    <!--        Traditional Method To Create 2 Object With Same Data & By Default Type Of Collections (We Can also Create This Directly In Java Code)  --> 
+    
+    <bean name="StuDetails" class="com.springcore.collection.StudentDetailsBean" >
+       
+        <property name="name" value="Jitu Thakur"/>
+        
+        <property name="phones">
+            <list>                     
+                <value>
+                    82348081
+                </value>
+                
+                <value>
+                    9691177
+                </value>
+                
+                <null/>                 
+            </list>
+        </property>
+        
+        <property name="adresses">
+            <set>
+                <value>
+                    Korba
+                </value>
+                
+                <value>
+                    Bilaspur
+                </value>
+            </set>
+        </property>
+        
+        <property name="courses">
+            <map>
+                <entry key="Java" value="1 month"/>
+                <entry key="Golang" value="1.5 month"/>
+                <entry key="Kotlin" value="1.8 month"/>
+            </map>
+        </property>
+    </bean>
+    
+    <bean name="StuDetails2" class="com.springcore.collection.StudentDetailsBean" >
+       
+        <property name="name" value="Jitu Thakur"/>
+        
+        <property name="phones">
+            <list>                     
+                <value>
+                    82348081
+                </value>
+                
+                <value>
+                    9691177
+                </value>
+                
+                <null/>                 
+            </list>
+        </property>
+        
+        <property name="adresses">
+            <set>
+                <value>
+                    Korba
+                </value>
+                
+                <value>
+                    Bilaspur
+                </value>
+            </set>
+        </property>
+        
+        <property name="courses">
+            <map>
+                <entry key="Java" value="1 month"/>
+                <entry key="Golang" value="1.5 month"/>
+                <entry key="Kotlin" value="1.8 month"/>
+            </map>
+        </property>
+    </bean>
+    
+    
+</beans>

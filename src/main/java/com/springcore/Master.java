@@ -1,6 +1,7 @@
 package com.springcore;
 
 import com.springcore.collection.StudentDetailsBean;
+import com.springcore.property.DbConfiguration;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
@@ -36,6 +37,16 @@ public class Master {
         System.out.println("Type Of List : " + beanObject2.getPhones().getClass().getName());
         System.out.println("Type Of Set : " + beanObject2.getAdresses().getClass().getName());
         System.out.println("Type Of Map : " + beanObject2.getCourses().getClass().getName());
+
+        System.out.println("----------------------------------*** Standalone Properties ***----------------------------------------------");
+
+        ApplicationContext props = new ClassPathXmlApplicationContext("properties_config.xml");
+
+        DbConfiguration db1 = props.getBean("db1", DbConfiguration.class);
+        System.out.println(db1);
+
+        DbConfiguration db2 = props.getBean("db2", DbConfiguration.class);
+        System.out.println(db2);
 
     }
 

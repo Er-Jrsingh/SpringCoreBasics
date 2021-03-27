@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+                           http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
+    
+    <!-- Create Standalone For Properties --> 
+    
+    <util:properties id="standalone_props">
+  
+        <prop key="driver" >
+            com.mysql.jdbc.Driver 
+        </prop>
+        <prop key="username" >
+            Jitesh
+        </prop>
+        <prop key="password" >
+            root
+        </prop>
+        <prop key="url" >
+            mysql:jdbc://localhost:3306/database 
+        </prop>
+                     
+    </util:properties> 
+    
+    <bean name="db1" class="com.springcore.property.DbConfiguration" >
+        
+        <property name="vendor" value="MariaDB"/>
+        <property name="config" ref="standalone_props"/>
+        
+        
+    </bean>
+    
+    <bean name="db2" class="com.springcore.property.DbConfiguration" >
+        
+        <property name="vendor" value="MySql"/>
+        <property name="config" ref="standalone_props"/>
+        
+    </bean>
+    
+</beans>

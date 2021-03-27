@@ -6,85 +6,147 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
                            http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
     
-    <!--        Traditional Method To Create 2 Object With Same Data & By Default Type Of Collections (We Can also Create This Directly In Java Code)  --> 
+    <!-- Create Standalone Collection & Change The Type According To Own --> 
+    
+    <util:list list-class="java.util.Vector" id="standalone_list" >
+        
+        <value>
+            82348081
+        </value>
+                
+        <value>
+            9691177
+        </value>
+                
+    </util:list>
+    
+    <util:set id="standalone_set" set-class="java.util.HashSet">
+        
+        <value>
+            Korba
+        </value>
+                    
+        <value>
+            Bilaspur
+        </value>
+        
+        <value>
+            Ambikapur
+        </value>
+        
+    </util:set>
+    
+    <util:map id="standalone_map" map-class="java.util.TreeMap" >
+        
+        <entry key="Java" value="1 month"/>
+        <entry key="Golang" value="1.5 month"/>
+        <entry key="Kotlin" value="1.8 month"/>
+        
+    </util:map>
+    
     
     <bean name="StuDetails" class="com.springcore.collection.StudentDetailsBean" >
-       
+        
         <property name="name" value="Jitu Thakur"/>
+        <property name="phones" ref="standalone_list"/>
+        <property name="adresses" ref="standalone_set"/>
+        <property name="courses" ref="standalone_map"/>
         
-        <property name="phones">
-            <list>                     
-                <value>
-                    82348081
-                </value>
-                
-                <value>
-                    9691177
-                </value>
-                
-                <null/>                 
-            </list>
-        </property>
-        
-        <property name="adresses">
-            <set>
-                <value>
-                    Korba
-                </value>
-                
-                <value>
-                    Bilaspur
-                </value>
-            </set>
-        </property>
-        
-        <property name="courses">
-            <map>
-                <entry key="Java" value="1 month"/>
-                <entry key="Golang" value="1.5 month"/>
-                <entry key="Kotlin" value="1.8 month"/>
-            </map>
-        </property>
     </bean>
     
     <bean name="StuDetails2" class="com.springcore.collection.StudentDetailsBean" >
-       
-        <property name="name" value="Jitu Thakur"/>
         
-        <property name="phones">
-            <list>                     
-                <value>
-                    82348081
-                </value>
-                
-                <value>
-                    9691177
-                </value>
-                
-                <null/>                 
-            </list>
-        </property>
+        <property name="name" value="Jitesh Thakur"/>
+        <property name="phones" ref="standalone_list"/>
+        <property name="adresses" ref="standalone_set"/>
+        <property name="courses" ref="standalone_map"/>
         
-        <property name="adresses">
-            <set>
-                <value>
-                    Korba
-                </value>
-                
-                <value>
-                    Bilaspur
-                </value>
-            </set>
-        </property>
-        
-        <property name="courses">
-            <map>
-                <entry key="Java" value="1 month"/>
-                <entry key="Golang" value="1.5 month"/>
-                <entry key="Kotlin" value="1.8 month"/>
-            </map>
-        </property>
     </bean>
     
     
+    
+    
+    <!--        Traditional Method To Create 2 Object With Same Data & By Default Type Of Collections (We Can also Create This Directly In Java Code)  --> 
+    <!--    
+        <bean name="StuDetails" class="com.springcore.collection.StudentDetailsBean" >
+           
+            <property name="name" value="Jitu Thakur"/>
+            
+            <property name="phones">
+                <list>                     
+                    <value>
+                        82348081
+                    </value>
+                    
+                    <value>
+                        9691177
+                    </value>
+                    
+                    <null/>                 
+                </list>
+            </property>
+            
+            <property name="adresses">
+                <set>
+                    <value>
+                        Korba
+                    </value>
+                    
+                    <value>
+                        Bilaspur
+                    </value>
+                </set>
+            </property>
+            
+            <property name="courses">
+                <map>
+                    <entry key="Java" value="1 month"/>
+                    <entry key="Golang" value="1.5 month"/>
+                    <entry key="Kotlin" value="1.8 month"/>
+                </map>
+            </property>
+        </bean>
+        
+        <bean name="StuDetails2" class="com.springcore.collection.StudentDetailsBean" >
+           
+            <property name="name" value="Jitesh Thakur"/>
+            
+            <property name="phones">
+                <list>                     
+                    <value>
+                        82348081
+                    </value>
+                    
+                    <value>
+                        9691177
+                    </value>
+                    
+                    <null/>                 
+                </list>
+            </property>
+            
+            <property name="adresses">
+                <set>
+                    <value>
+                        Korba
+                    </value>
+                    
+                    <value>
+                        Bilaspur
+                    </value>
+                </set>
+            </property>
+            
+            <property name="courses">
+                <map>
+                    <entry key="Java" value="1 month"/>
+                    <entry key="Golang" value="1.5 month"/>
+                    <entry key="Kotlin" value="1.8 month"/>
+                </map>
+            </property>
+        </bean>
+        
+        
+    -->
+
 </beans>

@@ -1,15 +1,23 @@
 package com.springcore;
 
+import java.util.List;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 @Component                                  // Create Object For  StudentBean & Imlicitly  it gives object's reference name In CamelCase, We Can Give Name Explicitly Like  @Component("anyName")
-public class StudentBean {
+public class StudentBeanCollection {
 
-    @Value("Jitu Thakur")                          // Inject this Value In Object
+    @Value("Jitesh Thakur")                          // Inject this Value In Object
     private String stuName;
-    @Value("Korba")
+    @Value("Bilaspur")
     private String address;
+    @Value("#{gmail}")                             // Insert Collection,gmail_list comes from stereo_collection_config.xml standalone collection
+    private List<String> email;
+
+    @Override
+    public String toString() {
+        return "StudentBeanCollection{" + "stuName=" + stuName + ", address=" + address + ", email=" + email + '}';
+    }
 
     public String getStuName() {
         return stuName;
@@ -27,8 +35,12 @@ public class StudentBean {
         this.address = address;
     }
 
-    @Override
-    public String toString() {
-        return "StudentBean{" + "stuName=" + stuName + ", address=" + address + '}';
+    public List<String> getEmail() {
+        return email;
     }
+
+    public void setEmail(List<String> email) {
+        this.email = email;
+    }
+
 }

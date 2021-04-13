@@ -13,13 +13,23 @@ public class Master {
 //
 //        StudentBean stu = con.getBean("studentBean", StudentBean.class);
 //        System.out.println(stu);
-
         System.out.println("+++++++++++++++++++++Collection+++++++++++++++++++++++++++");
 
-        ApplicationContext collection = new ClassPathXmlApplicationContext("stereo_collection_config.xml");
+//        ApplicationContext collection = new ClassPathXmlApplicationContext("stereo_collection_config.xml");
+//
+//        StudentBeanCollection stuColl = collection.getBean("studentBeanCollection", StudentBeanCollection.class);
+//        System.out.println(stuColl);
+//        
+        System.out.println("+++++++++++++++++++++Scope(By Default Singleton )+++++++++++++++++++++++++++");
 
-        StudentBeanCollection stuColl = collection.getBean("studentBeanCollection", StudentBeanCollection.class);
-        System.out.println(stuColl);
+        ApplicationContext scope = new ClassPathXmlApplicationContext("stereo_scope_config.xml");
+
+        StudentBeanScope stuScope = scope.getBean("studentBeanScope", StudentBeanScope.class);
+
+        System.out.println("Hash Code is : " + stuScope.hashCode());
+
+        StudentBeanScope stuScope2 = scope.getBean("studentBeanScope", StudentBeanScope.class);
+        System.out.println("Hash Code is : " + stuScope2.hashCode());
 
     }
 }

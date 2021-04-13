@@ -2,9 +2,11 @@ package com.springcore;
 
 import java.util.List;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 @Component                                  // Create Object For  StudentBean & Imlicitly  it gives object's reference name In CamelCase, We Can Give Name Explicitly Like  @Component("anyName")
+@Scope("prototype")
 public class StudentBeanScope {
 
     @Value("Jitesh Thakur")                          // Inject this Value In Object

@@ -25,7 +25,6 @@ public class Master {
         ApplicationContext scope = new ClassPathXmlApplicationContext("stereo_scope_config.xml");
 
         StudentBeanScope stuScope = scope.getBean("studentBeanScope", StudentBeanScope.class);
-
         System.out.println("Hash Code is : " + stuScope.hashCode());
 
         StudentBeanScope stuScope2 = scope.getBean("studentBeanScope", StudentBeanScope.class);

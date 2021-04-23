@@ -24,6 +24,17 @@ public class Master {
 
         System.out.println(exp.getValue());
 
+        System.out.println("************************************ Parsing By SePL(Invoke Static Method) *************************************************");
+
+        InvokeStatic sqr = context.getBean("invokeStatic", InvokeStatic.class);
+        System.out.println("Square Root Is : " + sqr.getSqRoot());
+
+        System.out.println("************************************ Parsing By SePL(Invoke Static Variable) *************************************************");
+
+        InvokeStatic var = context.getBean("invokeStatic", InvokeStatic.class);
+        System.out.println("Value Of e : " + var.getE());
+
+        System.out.println("Value Of PI : " + var.getPI());
     }
 
 }

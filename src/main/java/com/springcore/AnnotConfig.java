@@ -9,8 +9,13 @@ import org.springframework.context.annotation.Configuration;
 public class AnnotConfig {
 
     @Bean
+    public AdmissionDetails getAdmissionDetails(){
+        AdmissionDetails details=new AdmissionDetails();
+        return details;
+    }
+    @Bean
     public Student getStudent() {
-        Student student = new Student();
+        Student student = new Student(getAdmissionDetails());
         return student;
     }
 }

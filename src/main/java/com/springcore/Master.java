@@ -39,7 +39,12 @@ public class Master {
         CreateObject stuObj = context.getBean("createObject", CreateObject.class);
         stuObj.student.setId(19591);
         stuObj.student.setFee(20000);
-        System.out.println("From CreateObject : " + stuObj);
+        System.out.println("From CreateObject : " + stuObj.student);
+
+        System.out.println("************************************ Parsing By SePL( Inject boolean Using SpEL) *************************************************");
+
+        System.out.println("isPassOut Boolean Value is : " + stuObj.isPassOut);
+        System.out.println("hasAnyBack Boolean Value is : " + stuObj.hasAnyBack);
     }
 
 }

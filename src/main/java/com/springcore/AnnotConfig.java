@@ -13,7 +13,7 @@ public class AnnotConfig {
         AdmissionDetails details=new AdmissionDetails();
         return details;
     }
-    @Bean
+    @Bean(name = {"stu","student","temp"})              //We can Give Multiple Name To Bean Like This
     public Student getStudent() {
         Student student = new Student(getAdmissionDetails());
         return student;

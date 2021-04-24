@@ -8,7 +8,7 @@ public class Master {
     public static void main(String[] args) {
 
         ApplicationContext context = new AnnotationConfigApplicationContext(AnnotConfig.class);
-        Student student = context.getBean("getStudent", Student.class);
+        Student student = context.getBean("stu", Student.class);
         student.setMarks(95.52f);
 
         student.study();

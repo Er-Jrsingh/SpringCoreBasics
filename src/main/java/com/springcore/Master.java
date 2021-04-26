@@ -12,6 +12,12 @@ public class Master {
         ApplicationContext context = new ClassPathXmlApplicationContext("config.xml");
         JdbcTemplate template = context.getBean("jdbcTemplate", JdbcTemplate.class);
 
+//        Insert Query
+        String query = "insert into student(id,name,city) values(?,?,?)";
+//        Fire Query
+        int result = template.update(query, 2, "Bonjour", "bonsor");
+
+        System.out.println("Number Of Record Inserted....." + result);
 
     }
 }

@@ -1,23 +1,26 @@
 package com.springcore;
 
 
+import com.springcore.dao.StudentDao;
+import com.springcore.entities.Student;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
-import org.springframework.jdbc.core.JdbcTemplate;
 
 public class Master {
 
     public static void main(String[] args) {
 
         ApplicationContext context = new ClassPathXmlApplicationContext("config.xml");
-        JdbcTemplate template = context.getBean("jdbcTemplate", JdbcTemplate.class);
+        StudentDao studentDao = context.getBean("daoImpl", StudentDao.class);
 
-//        Insert Query
-        String query = "insert into student(id,name,city) values(?,?,?)";
-//        Fire Query
-        int result = template.update(query, 2, "Bonjour", "bonsor");
+        Student student = new Student();
+        student.setId(101);
+        student.setName("Jitu Thakur");
+        student.setCity("Korba");
 
-        System.out.println("Number Of Record Inserted....." + result);
+        int result = studentDao.insert(student);
+
+        System.out.println("Student Inserted....." + result);
 
     }
 }

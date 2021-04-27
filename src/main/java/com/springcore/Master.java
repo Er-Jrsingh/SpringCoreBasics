@@ -15,7 +15,7 @@ public class Master {
 
         System.out.println("*************************** Insert Query ****************************");
         Student student = new Student();
-        student.setId(102);
+        student.setId(103);
         student.setName("Jitu Thakur");
         student.setCity("Korba");
 
@@ -25,14 +25,20 @@ public class Master {
 
         System.out.println("*************************** Update Query ****************************");
 
-        Student stu = new Student();
-        stu.setId(102);
-        stu.setName("Jitesh Thakur");
-        stu.setCity("Bilaspur");
+        Student student2 = new Student();
+        student2.setId(103);
+        student2.setName("Jitesh Thakur");
+        student2.setCity("Bilaspur");
 
-        int res = studentDao.update(stu);
+        int result2 = studentDao.update(student2);
 
-        System.out.println("Student Inserted....." + res);
+        System.out.println("Student Inserted....." + result2);
 
+
+        System.out.println("*************************** Delete Query ****************************");
+
+        int result3 = studentDao.delete(103);
+
+        System.out.println("Student Deleted....." + result3);
     }
 }

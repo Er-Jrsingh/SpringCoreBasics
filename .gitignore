@@ -1,7 +1,6 @@
 /.idea/compiler.xml
 /.idea/encodings.xml
 /.idea/jarRepositories.xml
-/target/classes/com/springcore/Master.class
 /.idea/libraries/Maven__com_google_protobuf_protobuf_java_3_6_12.xml
 /.idea/libraries/Maven__commons_logging_commons_logging_1_2.xml
 /.idea/libraries/Maven__mysql_mysql_connector_java_8_0_16.xml
@@ -22,8 +21,13 @@
 /.idea/misc.xml
 /.idea/modules.xml
 /.idea/inspectionProfiles/Project_Default.xml
+/.idea/shelf/Uncommitted_changes_before_Update_at_29_04_21,_10_03_PM_[Default_Changelist]/shelved.patch
 /SpringCore.iml
-/target/classes/com/springcore/Student.class
+/target/classes/com/springcore/entities/Student.class
+/target/classes/com/springcore/dao/StudentDao.class
+/target/classes/com/springcore/dao/StudentDaoImpl$1.class
+/target/classes/com/springcore/dao/StudentDaoImpl.class
 /.idea/uiDesigner.xml
+/.idea/shelf/Uncommitted_changes_before_Update_at_29_04_21__10_03_PM__Default_Changelist_.xml
 /.idea/vcs.xml
 /.idea/workspace.xml

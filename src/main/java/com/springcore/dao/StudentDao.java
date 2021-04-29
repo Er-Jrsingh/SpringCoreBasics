@@ -8,4 +8,6 @@ public interface StudentDao {
     int update(Student student);
 
     int delete(int studentId);
+
+    Student getStudent(int studentId);
 }

@@ -32,7 +32,7 @@ public class Master {
 
         int result2 = studentDao.update(student2);
 
-        System.out.println("Student Inserted....." + result2);
+        System.out.println("Student Updated....." + result2);
 
 
         System.out.println("*************************** Delete Query ****************************");
@@ -40,5 +40,13 @@ public class Master {
         int result3 = studentDao.delete(103);
 
         System.out.println("Student Deleted....." + result3);
+
+        System.out.println("*************************** Single Object Select Query ****************************");
+
+        Student student1 = studentDao.getStudent(102);
+
+        System.out.println("Student Deleted....." + student1.getId());
+        System.out.println("Student Deleted....." + student1.getName());
+        System.out.println("Student Deleted....." + student1.getCity());
     }
 }

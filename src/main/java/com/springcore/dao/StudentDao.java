@@ -2,6 +2,8 @@ package com.springcore.dao;
 
 import com.springcore.entities.Student;
 
+import java.util.List;
+
 public interface StudentDao {
     int insert(Student student);
 
@@ -10,4 +12,6 @@ public interface StudentDao {
     int delete(int studentId);
 
     Student getStudent(int studentId);
+
+    List<Student> getAllStudent();
 }

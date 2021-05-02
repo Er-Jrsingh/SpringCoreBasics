@@ -1,15 +1,19 @@
 package com.springcore.dao;
 
 import com.springcore.entities.Student;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
+import org.springframework.stereotype.Component;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.List;
 
+@Component("daoImpl")
 public class StudentDaoImpl implements StudentDao {
 
+    //    @Autowired
     private JdbcTemplate jdbcTemplate;
 
     @Override
@@ -73,6 +77,7 @@ public class StudentDaoImpl implements StudentDao {
         return jdbcTemplate;
     }
 
+    @Autowired
     public void setJdbcTemplate(JdbcTemplate jdbcTemplate) {
         this.jdbcTemplate = jdbcTemplate;
     }

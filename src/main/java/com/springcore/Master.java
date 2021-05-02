@@ -4,7 +4,7 @@ package com.springcore;
 import com.springcore.dao.StudentDao;
 import com.springcore.entities.Student;
 import org.springframework.context.ApplicationContext;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 import java.util.List;
 
@@ -12,7 +12,11 @@ public class Master {
 
     public static void main(String[] args) {
 
-        ApplicationContext context = new ClassPathXmlApplicationContext("config.xml");
+//        ApplicationContext context = new ClassPathXmlApplicationContext("config.xml");
+
+        System.out.println("++++++++++++_------ By Annotation -------_+++++++++++++++");
+
+        ApplicationContext context = new AnnotationConfigApplicationContext(JdbcConfig.class);
         StudentDao studentDao = context.getBean("daoImpl", StudentDao.class);
 
         System.out.println("*************************** Insert Query ****************************");

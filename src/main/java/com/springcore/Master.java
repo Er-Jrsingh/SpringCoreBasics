@@ -11,7 +11,7 @@ public class Master {
 
         ApplicationContext applicationContext = new ClassPathXmlApplicationContext("config.xml");
         StudentDao studentDao = applicationContext.getBean("studentDao", StudentDao.class);
-        Student student = new Student(1, "Jitesh Singh", "Korba");
+        Student student = new Student(2, "Jitu Thakur", "Bilaspur");
         int rs = studentDao.insert(student);
 
         System.out.println(rs);
